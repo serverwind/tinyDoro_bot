@@ -8,7 +8,7 @@ HELP = '''Добро пожаловать в "НАЗВАНИЕ БОТА"!
 # команда: установить таймер на 25 минут
 def setTimer():
     workMin = int(input('Чтобы установить таймер на 25 минут напишите "25": '))
-    workSec = workMin
+    workSec = workMin*60
     regime = 1
     return workSec, regime
 
@@ -29,7 +29,7 @@ def startTimer(workSec, regime):
         if regime == 0:
             regime = 1
             userInput = input('Время отдохнуть! Напишите что-нибудь если готовы: ')
-            timer(5, regime)
+            timer(300, regime)
     # по прошествии 5 минут приходит уведомление, что нужно начать работу
     # пользователь жмет ок, начинает работу, таймер стартует.
         elif regime == 1:
