@@ -8,8 +8,15 @@ HELP = '''Добро пожаловать в "НАЗВАНИЕ БОТА"!
 
 # команда: установить таймер на 25 минут
 def setTimer():
-    workMin = int(input('Чтобы установить таймер на 25 минут напишите "25": '))
-    workSec = workMin*60
+    workMin = input('Чтобы установить таймер на 25 минут напишите "25": ')
+    while type(workMin) != int:  # пока юзер не введет значение числом
+        try:
+            int(workMin)
+            break
+        except:
+            print('Введено некорректное значение. Пожалуйста введите значение цифрой.')
+            workMin = input('Чтобы установить таймер на 25 минут напишите "25": ')
+    workSec = int(workMin)*60
     regime = 1
     return workSec, regime
 
