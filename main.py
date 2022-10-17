@@ -30,7 +30,7 @@ def timer(workSec, regime):
     while workSec > 0:
         time.sleep(1)
         workSec -= 1
-        print(workSec, 'regime: ', regime)
+        print(workSec, 'regime: ', regime)  # для проверки на баги
 
 
 # основной цикл программы и старт таймера
