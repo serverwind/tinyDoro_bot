@@ -8,7 +8,7 @@ Bot will notify user when to start work, or when the time to take a rest.
 # Commands
 
 1. <i>/start, /help</i> - shows info about the bot.
-2. <i>/add &lt;number&gt; - sets a number of minutes what you will work. For example <i>/add 25</i>.
+2. <i>/add &lt;number&gt;</i> - sets a number of minutes what you will work. For example <i>/add 25</i>.
 
 # Live
 * <a href="https://t.me/TinyDoro_bot">@TinyDoro_Bot</a>
