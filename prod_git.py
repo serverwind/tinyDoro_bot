@@ -31,7 +31,7 @@ def setTimer(message):
 
 # процесс переключения режимов таймера с работы на отдых
 def workTimer(message, workMin, regime):
-    workSec = int(workMin)
+    workSec = int(workMin)*60
 
     if regime == 0:
         bot.send_message(message.chat.id, 'Время отдохнуть! Введите "yaw" чтобы начать.')
@@ -39,7 +39,7 @@ def workTimer(message, workMin, regime):
         @bot.message_handler(commands=['yaw'])
         def startRest(message):
             regime = 1
-            timer(5, workMin, regime, message)
+            timer(300, workMin, regime, message)
     elif regime == 1:
         bot.send_message(message.chat.id, 'Время поработать! Введите "yes" чтобы начать.')
 
